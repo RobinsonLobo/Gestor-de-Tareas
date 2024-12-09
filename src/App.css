@@ -1,0 +1,199 @@
+/* Contenedor principal que mantiene todo alineado */
+.contenedor-principal {
+  display: flex;
+  flex-direction: row; /* Alineación horizontal de los contenedores */
+  justify-content: space-between; /* Distribución del espacio entre contenedores */
+  align-items: flex-start; /* Alineación de los elementos al inicio */
+  gap: 20px; /* Espacio entre los contenedores */
+  max-width: 2000px; /* Ancho máximo del contenedor */
+  margin: 20px auto; /* Centrar el contenedor */
+  padding: 20px; /* Espaciado interno */
+  background-color: #FAF3E0; /* Fondo del contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  border: 1px solid #ddd; /* Borde del contenedor */
+  
+}
+
+/* Contenedor para el título */
+.titulo-contenedor {
+  text-align: center; /* Centra el título */
+  margin-bottom: 20px; /* Espaciado debajo del título */
+  background-color: #FAF3E0;
+  border: 1px solid #ddd; /* Borde del contenedor */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0%;
+  max-width: 100%; /* Asegura que no se expanda más de lo necesario */
+  height: 30px; /* Establecer un alto fijo para el contenedor del título */
+  display: flex;
+  align-items: center; /* Centra verticalmente el texto */
+  justify-content: center; /* Centra horizontalmente el texto */
+  overflow: hidden; /* Evita que el contenedor cambie de tamaño */
+}
+
+/* Barra superior */
+.barra-superior {
+  width: 100%; /* Asegura que ocupe todo el ancho de la página */
+  height: 60px; /* Altura de la barra */
+  background-color: #faf3f3; 
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  position: fixed; /* Fija la barra en la parte superior */
+  top: 0; /* Asegura que esté en la parte superior */
+  left: 0;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilo del logo */
+.logo {
+  max-height: 55px; /* Ajusta el tamaño del logo */
+}
+
+
+.agregar-tarea {
+  text-align: center;
+  padding: 17px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ddc396; /* Color suave para agregar tarea */
+  width: 300px;
+  height: 140px;
+}
+
+.agregar-tarea h2 {
+  color: #333;
+  font-family: poppins;
+
+}
+
+.lista-tareas {
+  text-align: center;
+  padding: 22px 70px;
+  background-color: #ddc396;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se alineen verticalmente */
+  justify-content: flex-start; /* Elementos inician desde arriba */
+  max-width: 500px;
+  max-height: 340px; /* Altura máxima para evitar expansión indefinida */
+  overflow-y: auto; /* Agregar barra de desplazamiento si es necesario */
+ 
+}
+
+.lista-tareas h2 {
+  font-family: Poppins;
+  text-align: center; /* Centrar el título */
+  font-size: 1.6rem; /* Tamaño del texto */
+  margin-bottom: -12px; /* Espaciado debajo del título */
+  color: #333; /* Color del texto */
+}
+
+h1 {
+  text-align: center;
+  font-family: poppins;
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 20px; /* Espacio entre el título y los contenedores */
+}
+
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #e9f7ea, #cce7d0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #ffffff; /* Fondo del contenedor */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  width: 400px;
+  padding: 20px;
+}
+
+/* Formulario */
+input[type="text"] {
+  padding: 13px;
+  width: 60%;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 10px; 
+}
+
+input[type="checkbox"] {
+  transition: transform 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  transform: scale(1.1);
+}
+
+
+button {
+  padding: 8px 15px;
+  background-color: #4CAF50; /* Botón verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #45a049; /* Hover del botón */
+}
+
+/* Lista de tareas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9fafb;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li.completed {
+  text-decoration: line-through; /* Tachado para tareas completadas */
+  color: #6b7280;
+}
+
+/* Estilo para los botones de eliminar */
+li button {
+  padding: 6px 12px;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+li button:hover {
+  background-color: #ff6b6b; /* Rojo más oscuro cuando pasas el ratón */
+}
+
+.completed {
+  color: gray;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
